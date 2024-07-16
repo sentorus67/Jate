@@ -20,6 +20,7 @@ const loadSpinner = () => {
 const editor = new Editor();
 
 if (typeof editor === 'undefined') {
+  console.log('editor is empty')
   loadSpinner();
 }
 
@@ -31,3 +32,5 @@ if ('serviceWorker' in navigator) {
 } else {
   console.error('Service workers are not supported in this browser.');
 }
+
+console.log('Testing index.js file');
