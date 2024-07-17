@@ -20,17 +20,17 @@ const loadSpinner = () => {
 const editor = new Editor();
 
 if (typeof editor === 'undefined') {
-  console.log('editor is empty')
   loadSpinner();
 }
 
 // Check if service workers are supported
 if ('serviceWorker' in navigator) {
   // register workbox service worker
+
   const workboxSW = new Workbox('/src-sw.js');
   workboxSW.register();
 } else {
   console.error('Service workers are not supported in this browser.');
 }
 
-console.log('Testing index.js file');
+
